@@ -77,15 +77,19 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 12. Updating app routes
 
-13. Listing users
+13. Listing users in ``site/users/users-list component`` using state manager
 
-14. Listing posts
+14. Listing posts in ``site/posts/posts-list component`` using state manager
 
-15. Filtering posts
+15. Putting users and posts list in the ``site/home component`` container
 
-14. Adding post
+16. Filtering posts using ``EventEmitter``
 
-15. Show post detail
+17. Adding post using facede service and state manager
+
+18. Deleting a post using facede service and state manager
+
+19. Show post detail in ``site/posts/post-detail component`` and its comments in ``site/posts/post-comments component``
 
 
 ## Development server
