@@ -1,0 +1,183 @@
+/* IMPORT
+-------------------------------------------------------------------------------------------------------------------- */
+@import 'variables.scss';
+
+
+/* MODAL SEARCH FORM
+--------------------------- */
+.modal-search-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: white;
+    z-index: 99999;
+    
+    transition: all .4s ease-out;
+    transform: translate(-100%,0);
+    
+    > .container {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .searchform {
+        width: 100%;
+        .s {
+            width: 100%;
+            border: 0;
+            border-bottom: 1px solid;
+            font-size: 1.3em;
+            padding-left: 0;
+            height: 60px;
+            line-height: 60px;
+            background: none;
+            &:focus {
+                background: none;
+            }
+        }
+        .submit {
+            right: 0;
+            top: 10px;
+            color: #ccc;
+            font-size: 24px;
+        }
+    }
+    
+    .close-modal {
+        display: block;
+        width: 40px;
+        height: 40px;
+        text-align: center;
+        line-height: 40px;
+        
+        position: absolute;
+        top: 10%;
+        right: 10%;
+        color: inherit;
+        cursor: pointer;
+        
+        font-size: 28px;
+        
+        color: #ccc;
+        transition: all .1s ease-out;
+        
+        &:hover {
+            color: black;
+        }
+        
+        i {
+            display: block;
+            line-height: inherit;
+        }
+    }
+}
+
+.modal-search-container {
+    width: 800px;
+    margin: 0 auto;
+    max-width: 90%;
+}
+
+.admin-bar .modal-search-wrapper {
+    top: 32px;
+}
+
+.on-search {
+    
+    overflow: hidden;
+    .modal-search-wrapper {
+        transform: translate(0,0);
+    }
+}
+
+/* search menu */
+.search-nav-heading {
+    margin: 2em 0 0;
+}
+#search-menu {
+    font-size: 1.3em;
+    margin: 1em 0 0;
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    li {
+        display: inline-block;
+        & + li:before {
+            content: "/";
+            margin: 0 10px;
+        }
+    }
+    a {
+        color: inherit;
+        
+        &:focus {
+            outline: 0;
+        }
+        
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+/* MODAL  FORM
+--------------------------- */
+$sred: red($secondary-color);
+
+$sgreen: green($secondary-color);
+
+$sblue: blue($secondary-color);
+
+.modal{
+    visibility: hidden;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    height: 100%;
+    width: 100%; 
+    overflow-y: hidden;   
+    background-color: rgba(125,125,125,.85);    
+    transition: all .5s ease-in-out;
+    z-index: 999;
+    opacity: 0;
+
+    
+    .modal-content{
+        position:absolute;      
+        width: 70%;
+        left:50%;               
+        top: 50%;
+        margin-left: -35%;
+        padding-bottom: 20px;
+        background-color: rgba(0,0,0,.85);
+        overflow-y: hidden;       
+        transition: all .5s ease-in-out;
+
+        .modal-header{
+            display: flex;
+            justify-content: center;
+            background-color: $secondary-color;
+            color: white;
+            padding-top:20px;
+        }
+
+        .modal-body{
+            overflow-y: scroll; 
+        }
+        
+    }
+    &.show{
+        opacity: 1;
+        visibility: visible;        
+
+        .modal-content{                        
+            transform: translateY(-50%);
+        }       
+    }   
+}

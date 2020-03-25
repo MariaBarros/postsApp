@@ -1,0 +1,103 @@
+/* IMPORT
+-------------------------------------------------------------------------------------------------------------------- */
+
+
+@import 'variables.scss';
+
+
+textarea,.textarea {
+    height: 180px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    line-height: 1.5;
+    width: 100%;
+    border: 1px solid $border;
+}
+
+
+
+select {
+    width:100%;
+    max-width:100%;
+    outline:none;
+    height: 46px;
+    line-height: 48px;
+    border: 1px solid $border;
+    padding: 0 12px;
+}
+
+
+mat-form-field{
+
+    width:100%;
+
+    margin-bottom:20px;
+
+    input{
+        border: none;
+    }
+
+    &.textarea{
+        
+
+        border: none;
+
+        padding: 10px;
+
+        textarea{
+
+            border: none;
+
+        }
+    }
+
+}
+
+
+mat-label{
+
+    text-transform: uppercase;
+
+    color: $secondary-color;    
+
+}
+
+.mat-input-element:disabled{
+
+    color: rgb(100,100,100);
+
+}
+
+.mat-select{
+    padding: 5px;
+    line-height: 2;
+    border: 1px solid rgba(0,0,0,.25);
+}
+
+.collection-container{
+    
+    margin-top: 20px;
+
+}
+
+
+form{
+    padding:100px;
+}
+
+
+.form-button-container{
+    
+    margin-top: 2em;
+
+    .primary-button{
+        background-color: black;
+        color: white;
+    }
+
+}
+
+button.button-hide{
+    background-color: transparent;
+    color: black;
+}

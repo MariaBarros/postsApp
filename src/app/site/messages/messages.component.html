@@ -1,0 +1,13 @@
+<div class="alert" *ngFor='let mess of messenger.messages' 
+	[ngClass]="{'error': isError(mess)=== true , 'success': isSuccess(mess)=== true }" >
+	
+	  
+	{{mess.message}}
+
+	<p class="small" *ngIf="mess && mess.detail !== ''">
+
+	  	{{mess.detail}}
+		 	
+	</p>	  
+	
+</div>

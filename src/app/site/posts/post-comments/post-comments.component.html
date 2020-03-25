@@ -1,0 +1,17 @@
+<div *ngIf="comments">
+	<div *ngIf="show === true; else showing">
+		<h4>Comments</h4>
+		<button mat-button (click)="show = false">Hide Comments</button>
+		<div *ngFor="let comment of comments">
+			<div><h5>{{comment.name}}</h5></div>
+			<div>{{comment.body}}</div>
+		</div>
+		
+	</div>
+</div>
+
+
+
+<ng-template #showing>
+	<button mat-button (click)="show = true">Show Comments</button>
+</ng-template>

@@ -1,0 +1,72 @@
+/* Typography
+-------------------------------------------------------------------------------------------------------------------- */
+$body-size: 18px;
+
+
+
+
+/* Color
+-------------------------------------------------------------------------------------------------------------------- */
+$accent: #db4a37;
+
+$primary-color: #000000;
+
+$secondary-color: #cccccc;
+
+$secondary-dark-color: darken($secondary-color, .15);
+
+$secondary-light-color: lighten($secondary-color, .15);
+
+
+$link-color: $secondary-color;
+
+$grayColor: #cccc;
+
+$border: #eeeeee;
+
+
+
+/* Screen
+-------------------------------------------------------------------------------------------------------------------- */
+$desktop: 1279px;
+
+$ipad: 1023px;
+
+$ipad-p: 767px;
+
+$iphone: 567px;
+
+$iphone-p: 479px;
+
+$iphone-5: 374px;
+
+
+$ipad-f: 0.88;
+
+$ipad-p-f: 0.71;
+
+$iphone-f: 0.5;
+
+$iphone-p-f: 0.42;
+
+
+
+/* Mobile
+-------------------------------------------------------------------------------------------------------------------- */
+$mobile-height: 54px;
+
+
+$fb: #3b5998;
+$ms: #0084ff;
+$tw: #55acee;
+$pin: #cc2127;
+$lin: #0077b5;
+$em: #111;
+$wa: #128c7e;
+$rd: #ff4500;
+
+
+$large: 4.5em;
+$medium: 3.4em;
+$normal: 2.3em;
+$small: 1.6em;

@@ -1,0 +1,20 @@
+<app-header></app-header>
+
+<div class="grid grid-2-columns">
+
+	<div>
+		<app-users-list (select)="filterPosts($event)"></app-users-list>
+	</div>
+
+	<div>
+		<app-messages></app-messages>
+		
+		<h4 *ngIf="userSelected">Post of the user: {{userSelected.name}}</h4>
+		<div class="button-container">
+			<button class="button-new" (click)="newPost()" mat-button>Add Post</button>
+		</div>
+		<app-posts-list (view)="showPostDetail($event)"></app-posts-list>
+	</div>
+
+</div>
+

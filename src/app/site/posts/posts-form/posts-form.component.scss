@@ -1,0 +1,9 @@
+@import 'styles/form.scss';
+
+.grid-2-columns{
+
+	$width: calc(50% - 10px);    
+
+    grid-template-columns:  repeat(2, [col] $width);
+
+}

@@ -1,0 +1,21 @@
+<div *ngIf="users">
+	<div *ngIf="users.length > 0; else empty">		
+		<mat-list>
+			<mat-list-item><h2>Users</h2></mat-list-item>
+
+		 <mat-list-item *ngFor="let user of users">
+		 	<button mat-button (click)="emitFilter(user)"> {{user.name}}</button>
+		 </mat-list-item>
+		 
+		</mat-list>
+		<button *ngIf="userSelected" (click)="clearFilter()" mat-button>
+			Clear filter
+		</button>
+	</div>
+</div>
+
+<ng-template #empty>Empty users list</ng-template>
+
+<app-loading [loading$]="state.isUpdating$">
+	<div>Loading users...</div>
+</app-loading>

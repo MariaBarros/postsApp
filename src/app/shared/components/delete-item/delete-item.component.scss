@@ -1,0 +1,65 @@
+
+$color: black;
+
+.modal{
+    visibility: hidden;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    height: 100%;
+    width: 100%; 
+    overflow-y: hidden;   
+    background-color: rgba(125,125,125,.85);    
+    transition: all .5s ease-in-out;
+    z-index: 999;
+    opacity: 0;
+
+    
+    .modal-content{
+        position:absolute;      
+        width: 70%;
+        left:50%;               
+        top: 50%;
+        margin-left: -35%;
+        padding-bottom: 20px;
+        background-color: rgba(0,0,0,.85);
+        overflow-y: hidden;       
+        transition: all .5s ease-in-out;
+
+        .modal-header{
+            display: flex;
+            justify-content: center;
+            background-color: $color;
+            color: white;
+            padding-top:20px;
+        }
+
+        .modal-body{
+            overflow-y: scroll; 
+        }
+        
+    }
+    &.show{
+        opacity: 1;
+        visibility: visible;        
+
+        .modal-content{                        
+            transform: translateY(-50%);
+        }       
+    }   
+}
+
+.modal-content{
+	background-color: white !important;
+	padding:20px;
+}
+
+.modal-footer{
+	padding-top:20px;
+	border-top: 1px solid;
+}
+
+.delete-btn{
+	background-color: $color;
+	color: white;
+}

@@ -1,0 +1,11 @@
+<app-header></app-header>
+
+<div class="detail-container">
+<div *ngIf="post; else loading">
+	<h2>{{post.title}}</h2>
+	<p>{{post.body}}</p>
+	<app-post-comments *ngIf="comments" [comments]="comments"></app-post-comments>
+</div>
+
+<ng-template #loading></ng-template>
+</div>

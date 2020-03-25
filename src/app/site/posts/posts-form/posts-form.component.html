@@ -1,0 +1,68 @@
+<form class="form-row" [formGroup]="postForm" (ngSubmit)="submit()"> 
+
+	<h2>Post</h2>
+
+  <div class="grid grid-2-columns">         
+
+    <mat-form-field>
+
+      <mat-label>Title</mat-label>
+        
+      <input type="text" matInput placeholder="Post Title" formControlName="title" required >              
+
+      <mat-error *ngIf="f.title.errors">          
+        <span>The title is required</span>
+      </mat-error>
+      
+    </mat-form-field>
+   </div>
+
+   <div>
+
+   	<div *ngIf="users" class="grid grid-2-columns">
+    	<div>
+
+	      <mat-label>User</mat-label>
+	      
+	      <mat-select formControlName="userId" required>
+
+	          <mat-option *ngFor="let user of users" [value]="user.id">
+	            {{user.name}}
+	          </mat-option>
+
+	      </mat-select>
+
+	      
+	    </div>
+
+    </div>
+
+    <mat-form-field>
+      
+      <mat-label>Body</mat-label>
+
+      <textarea matInput formControlName="body" required ></textarea>
+
+      <mat-error *ngIf="f.body.errors">          
+        <span>The body is required</span>
+      </mat-error>
+      
+    </mat-form-field>      
+
+
+
+  </div>
+
+  <div class="form-button-container grid grid-2-columns">
+
+    <button mat-raised-button class="primary-button" type="submit">
+      Save
+    </button>
+
+    <button mat-raised-button class="col-12 col-lg-6 fox-btn btn-fill" type="button" (click)="goHome()">
+      Cancel
+    </button>
+
+  </div>   
+    
+</form>

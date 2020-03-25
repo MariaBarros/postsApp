@@ -1,0 +1,33 @@
+<div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="confirmDelete" aria-hidden="true" 
+
+	[ngClass]="{'show': show === true}">
+
+	<div role="document" class="modal-dialog modal-dialog-centered modal-lg">
+
+	  	<div class="modal-content">
+
+	    	<div class="modal-header">      
+	        	<div>
+	    			<ng-content select="[modal-title]"></ng-content>
+	    		</div>
+	    	</div>
+
+	    	<div class="modal-body">	    	
+	    		<ng-content></ng-content>
+	    	</div>
+
+			<div class="modal-footer">
+		    	<button mat-raised-button class="col-12 col-lg-6 fox-btn btn-fill delete-btn" type="submit" (click)="delete()">
+	      			Delete
+	    		</button>
+
+	    		<button mat-raised-button class="col-12 col-lg-6 fox-btn btn-fill" (click)="close()" type="button">
+	      			Cancel
+	    		</button>
+    		</div>
+	    
+	  	</div>
+
+	</div>
+
+</div>

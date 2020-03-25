@@ -1,0 +1,13 @@
+<mat-progress-spinner [ngClass]="{'hidden': !showLoader}"
+    class="app-loader"
+    [color]="loaderProperties.color"
+    [mode]="loaderProperties.mode"
+    [value]="loaderProperties.diameter">
+
+</mat-progress-spinner>
+
+<div [ngClass]="{'hidden': !showLoader}">
+	<div class="d-flex align-items-center">
+		<ng-content></ng-content>
+	</div>
+</div>
